@@ -169,9 +169,9 @@ public class Layer {
                 Integer plaque = ApplicationContext.getIntInput().nextInt();
 
                 Address address = new Address(state, city, street, postalCode, plaque);
-                Set<Address> studentAddressList = ApplicationContext.getStudent().getAddress();
+                Set<Address> studentAddressList = ApplicationContext.getStudent().getAddresses();
                 studentAddressList.add(address);
-                ApplicationContext.getStudent().setAddress(studentAddressList);
+                ApplicationContext.getStudent().setAddresses(studentAddressList);
 
                 System.out.println("New Address Set Succeed");
 
