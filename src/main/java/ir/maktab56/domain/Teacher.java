@@ -2,7 +2,9 @@ package ir.maktab56.domain;
 
 import ir.maktab56.base.domain.BaseEntity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
@@ -24,20 +26,15 @@ public class Teacher extends BaseEntity<Long> {
     @Column(name = "birthday")
     private Date birthday;
 
-    @OneToOne
-    @JoinColumn(name = "address_id")
-    private Address address;
-
     public Teacher() {
     }
 
-    public Teacher(String firstName, String lastName, String teacherCode, Double salary, Date birthday,Address address) {
+    public Teacher(String firstName, String lastName, String teacherCode, Double salary, Date birthday, Address address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.teacherCode = teacherCode;
         this.salary = salary;
         this.birthday = birthday;
-        this.address = address;
     }
 
     public String getFirstName() {
@@ -79,7 +76,4 @@ public class Teacher extends BaseEntity<Long> {
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
-
-
-    //TODO set toStringTeacher
 }

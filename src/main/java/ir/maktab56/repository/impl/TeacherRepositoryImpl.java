@@ -14,6 +14,6 @@ public class TeacherRepositoryImpl extends BaseRepositoryImpl<Teacher, Long> imp
 
     @Override
     public Class<Teacher> getEntityClass() {
-        return Teacher.class;
+        return null;
     }
 }
